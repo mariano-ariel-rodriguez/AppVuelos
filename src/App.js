@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, createContext, useMemo, useCallback, memo } from 'react';
 import { Search, Plane, Heart, Clock, Shield, Star, Phone, Mail, MapPin, Users, Wifi, Coffee, Car, Dog, Activity, Truck, Navigation, ChevronDown, ChevronUp, Filter, Calendar, Globe, Award, CheckCircle } from 'lucide-react';
+import AIChatbot from './AIChatbot';
 
 // Service Context
 const ServiceContext = createContext();
@@ -947,6 +948,8 @@ const App = () => {
         )}
         
         <EmergencyWidget />
+        <AIChatbot currentService={currentService} />
+
       </div>
     </ServiceContext.Provider>
   );
